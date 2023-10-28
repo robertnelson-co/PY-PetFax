@@ -3,7 +3,7 @@ import json
 pets = json.load(open('pets.json'))
 bp = Blueprint('pet', __name__, url_prefix='/pets')
 
-print (pets)
+#print (pets)
 
 
 @bp.route("/")
