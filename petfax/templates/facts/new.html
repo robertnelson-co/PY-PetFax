@@ -4,8 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    
+    <h1> Submit Fax</h1>
+    <div>
+        <h3>If you have some fun animal facts you'd like to share, Please submit them! We may use them in teh future.</h3>
+    </div>
+
+    <form action="/facts" method="POST">
+        <label for="submitter">Your Name:</label>
+        <input type="text" name="submitter" required>
+        <br><br>
+        <label for="fact">Share a Fact:</label>
+        <textarea name="fact" required></textarea>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form> 
+    <a href="/pets">Go Back</a>
 </body>
 </html>
